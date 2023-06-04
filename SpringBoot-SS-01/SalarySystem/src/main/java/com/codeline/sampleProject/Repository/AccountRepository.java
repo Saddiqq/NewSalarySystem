@@ -16,7 +16,8 @@ public interface AccountRepository extends JpaRepository<Account, Long> {
     @Query("SELECT * FROM Account WHERE bankName=:BankName")
     Account getBankByName(@Param("BankName") String accountHolderName);
 
-
+    @Query("SELECT * FROM Account WHERE id=:ID")
+    Account getID(@Param("BankName") String accountHolderName);
 
 
 
